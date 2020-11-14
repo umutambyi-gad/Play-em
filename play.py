@@ -11,7 +11,10 @@ label.pack()
 inputData = Entry(App, bd=5, width=50, fg='dodgerblue')
 inputData.pack(side=LEFT)
 
-path = '' # your song path here ex. Users/YourUserName/dir
+path = ''
+with open('AddPathHere.txt') as file:
+	path = file.read().strip()
+
 def playSong():
 	song = inputData.get().strip()
 	for songs in os.listdir(path):
