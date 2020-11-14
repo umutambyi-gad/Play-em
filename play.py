@@ -19,13 +19,20 @@ with open('AddPathHere.txt') as file:
 
 
 def playSong():
-	song = inputData.get().strip()
-	for songs in os.listdir(path):
-		if song in songs.lower():
-			song_dir = os.path.join(path, songs)
-			if os.path.isfile(song_dir) and songs.endswith('mp4'):
-				os.startfile(song_dir)
-				inputData.delete(first=0, last=100)
+	try:
+		song = inputData.get().strip()
+		for songs in os.listdir(path):
+			if song in songs.lower():
+				song_dir = os.path.join(path, songs)
+				if os.path.isfile(song_dir) and songs.endswith('mp4'):
+					os.startfile(song_dir)
+					inputData.delete(first=0, last=100)
+		label['text'] = 'Enter any text you think is included in the song name'
+	except FileNotFoundError:
+		label['text'] = 'Check the path of your playlist exists'
+	except OSError:
+		label['text'] = 'Check the permission or unlock the driver if is locked'
+
 
 
 button = Button(App, text="Search", fg='white', bg='#179fca', activebackground='#197fda', width=10, height=1, bd=4, command=playSong, font=fontStyle)
