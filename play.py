@@ -1,19 +1,22 @@
 import os
 from tkinter import *
+import tkinter.font as tkFont
 
-App = Tk(className="Search Engine")
+App = Tk(className="Search")
 App.geometry("600x350")
-App.configure(bg='green')
+App.configure(bg='#5a05f1')
 
-label = Label(text='Enter any text you think is included in the song name', width=100, height=2, fg='black', bg='lightgreen')
+fontStyle = tkFont.Font(family='Courier', size=14, weight='bold')
+
+label = Label(text='Enter any text you think is included in the song name', width=100, height=2, fg='black', bg='#056cf1', font=fontStyle)
 label.pack()
 
-inputData = Entry(App, bd=5, width=50, fg='dodgerblue')
-inputData.pack(side=LEFT)
+inputData = Entry(App, bd=5, width=40, fg='dodgerblue', font=tkFont.Font(family='Lucida Grande', size=12, weight='bold'))
+inputData.pack(side=LEFT, ipady=4)
 
-path = ''
 with open('AddPathHere.txt') as file:
 	path = file.read().strip()
+
 
 def playSong():
 	song = inputData.get().strip()
@@ -24,7 +27,9 @@ def playSong():
 				os.startfile(song_dir)
 				inputData.delete(first=0, last=100)
 
-button = Button(App, text="Search", fg='white', bg='dodgerblue', activebackground='lightgreen', width=15, height=2, bd=4, command=playSong)
-button.pack(side=RIGHT)
 
+button = Button(App, text="Search", fg='white', bg='#179fca', activebackground='#197fda', width=10, height=1, bd=4, command=playSong, font=fontStyle)
+button.pack(side=RIGHT, ipady=5)
+
+App.resizable(False, False)
 App.mainloop()
