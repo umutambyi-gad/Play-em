@@ -43,7 +43,7 @@ def playSong():
 
 
 # Button for search (submit)
-search_button = Button(App, text="Search", fg='white', bg='#783ab7', activebackground='#197fda', width=10, height=1, bd=4, command=playSong, font=fontStyle)
+search_button = Button(App, text="Search", fg='white', bg='#783ab7', activebackground='#984bb7', width=10, height=1, bd=4, command=playSong, font=fontStyle)
 search_button.pack(side=RIGHT, ipady=5)
 search_button.place(x=300, y=170)
 
@@ -51,12 +51,12 @@ search_button.place(x=300, y=170)
 inputData.bind('<Return>', lambda event: playSong())
 
 # Button for reset
-reset_button = Button(App, text="reset", fg='white', bg='#783ab7', activebackground='lightgreen', width=10, height=1, bd=4, font=fontStyle)
+reset_button = Button(App, text="reset", fg='white', bg='#783ab7', activebackground='#984bb7', width=10, height=1, bd=4, font=fontStyle, command=lambda: inputData.delete(first=0, last=100))
 reset_button.pack()
 reset_button.place(x=150, y=170)
 
 # Button for quit
-quit_button = Button(App, text='Quit', fg='white', bg='#341e79', activebackground='lightgreen', width=11, height=1, bd=4, command=App.destroy, font=fontStyle)
+quit_button = Button(App, text='Quit', fg='white', bg='#341e79', activebackground='#452e89', width=11, height=1, bd=4, command=App.destroy, font=fontStyle)
 quit_button.pack(side=BOTTOM)
 quit_button.place(x=220, y=250)
 
