@@ -3,7 +3,7 @@ from tkinter import *
 import tkinter.font as tkFont
 
 App = Tk(className="Search")
-App.iconbitmap('search.ico')
+App.iconbitmap('searchIcon.ico')
 App.geometry("570x320")
 App.configure(bg='#241e79')
 
