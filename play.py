@@ -14,7 +14,7 @@ label.pack()
 
 # an input field
 inputData = Entry(App, bd=5, width=40, fg='dodgerblue', font=tkFont.Font(family='Lucida Grande', size=12, weight='bold'))
-inputData.pack(side=LEFT, ipady=4)
+inputData.pack(ipady=4)
 inputData.focus()
 inputData.place(x=95, y=100)
 
@@ -44,7 +44,7 @@ def playSong():
 
 # Button for search (submit)
 search_button = Button(App, text="Search", fg='white', bg='#783ab7', activebackground='#984bb7', width=10, height=1, bd=4, command=playSong, font=fontStyle)
-search_button.pack(side=RIGHT, ipady=5)
+search_button.pack(ipady=5)
 search_button.place(x=300, y=170)
 
 # Trigger Enter key to run playSong()
@@ -57,7 +57,7 @@ reset_button.place(x=150, y=170)
 
 # Button for quit
 quit_button = Button(App, text='Quit', fg='white', bg='#341e79', activebackground='#452e89', width=11, height=1, bd=4, command=App.destroy, font=fontStyle)
-quit_button.pack(side=BOTTOM)
+quit_button.pack()
 quit_button.place(x=220, y=250)
 
 # Trigger Escape<esc> key to destroy App
