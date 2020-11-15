@@ -47,18 +47,19 @@ To make it easier I recomanded to set an envirement variable of the location of 
 
 ![Run bat](https://user-images.githubusercontent.com/65312850/99182943-9f591780-2738-11eb-818c-5103d1ba9dbb.PNG)
 
-<!--
-* {
-    color: #ddd;
-    font-size: 20px;
-}
-body, .markdown-body {
-    background-color: 4d4d4e !important;
-}
-pre {
-    background-color:9f9f9f !important;
-}
-pre > * {
-    color:#fff !important;
-    font-weight: 900;
-}-->
+## UPDATE
+I just added python script <small>`playUsingCommandLine.py`</small> with the help of [click]()
+module which will be run in the command line.
+
+
+Syntax
+
+```bash
+python  playUsingCommandLine.py [OPTIONS] SONG
+```
+[OPTIONS] is by default the path wich is written on `AddPathHere.txt` file
+so to run it just do it like the following.
+
+```python
+python playUsingCommandLine.py godzil...
+```
