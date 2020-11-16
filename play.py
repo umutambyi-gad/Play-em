@@ -16,7 +16,7 @@ label.pack()
 inputData = Entry(App, bd=5, width=40, fg='dodgerblue', font=tkFont.Font(family='Lucida Grande', size=12, weight='bold'))
 inputData.pack(ipady=4)
 inputData.focus()
-inputData.place(x=95, y=100)
+inputData.place(x=75, y=100)
 
 # open `AddPathHere.txt` file to read the path(song location)
 with open('AddPathHere.txt') as file:
@@ -37,15 +37,30 @@ def playSong():
 					inputData.delete(first=0, last=100)
 		label['text'] = 'Enter any text you think is included in the song name'
 	except FileNotFoundError:
-		label['text'] = 'Check the path of your playlist exists'
+		label['text'] = 'Check the path of your playlist if exists'
 	except OSError:
 		label['text'] = 'Check the permission or unlock the driver if is locked'
 
 
+# function for picking random song and play it
+def pickRandom():
+	try:
+		playList = [os.path.join(path, songs) for songs in os.listdir(path)]
+		os.startfile(random.choice(playList))
+		inputData.delete(first=0, last=100)
+	except FileNotFoundError:
+		label['text'] = 'Check the path of your playlist if exists'
+	except OSError:
+		label['text'] = 'Check the permission or unlock the driver if is locked'
+
+random_button = Button(App, text="pick random", fg='white', bg='#6610f2', activebackground='#7710f2', width=9, height=1, bd=4, command=pickRandom, font=tkFont.Font(family='Lucida Grande', size=11, weight='bold'))
+random_button.pack()
+random_button.place(x=470, y=100)
+
 # Button for search (submit)
 search_button = Button(App, text="Search", fg='white', bg='#783ab7', activebackground='#984bb7', width=10, height=1, bd=4, command=playSong, font=fontStyle)
 search_button.pack(ipady=5)
-search_button.place(x=300, y=170)
+search_button.place(x=280, y=170)
 
 # Trigger Enter key to run playSong()
 inputData.bind('<Return>', lambda event: playSong())
