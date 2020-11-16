@@ -1,6 +1,7 @@
 import os
 from tkinter import *
 import tkinter.font as tkFont
+import random
 
 App = Tk(className="Search")
 App.iconbitmap('searchIcon.ico')
@@ -13,10 +14,10 @@ label = Label(text='Enter any text you think is included in the song name', widt
 label.pack()
 
 # an input field
-inputData = Entry(App, bd=5, width=40, fg='dodgerblue', font=tkFont.Font(family='Lucida Grande', size=12, weight='bold'))
-inputData.pack(ipady=4)
-inputData.focus()
-inputData.place(x=75, y=100)
+input_field = Entry(App, bd=5, width=40, fg='dodgerblue', font=tkFont.Font(family='Lucida Grande', size=12, weight='bold'))
+input_field.pack(ipady=4)
+input_field.focus()
+input_field.place(x=75, y=100)
 
 # open `AddPathHere.txt` file to read the path(song location)
 with open('AddPathHere.txt') as file:
@@ -25,7 +26,7 @@ with open('AddPathHere.txt') as file:
 # function for searching and playing songs
 def playSong():
 	try:
-		song = inputData.get().strip()
+		song = input_field.get().strip()
 		for songs in os.listdir(path):
 			if song in songs.lower():
 				song_dir = os.path.join(path, songs)
@@ -34,7 +35,7 @@ def playSong():
 				jpg = songs.endswith('jpg')
 				if os.path.isfile(song_dir) and mp_3 or mp_4 or jpg:
 					os.startfile(song_dir)
-					inputData.delete(first=0, last=100)
+					input_field.delete(first=0, last=100)
 		label['text'] = 'Enter any text you think is included in the song name'
 	except FileNotFoundError:
 		label['text'] = 'Check the path of your playlist if exists'
@@ -47,7 +48,7 @@ def pickRandom():
 	try:
 		playList = [os.path.join(path, songs) for songs in os.listdir(path)]
 		os.startfile(random.choice(playList))
-		inputData.delete(first=0, last=100)
+		input_field.delete(first=0, last=100)
 	except FileNotFoundError:
 		label['text'] = 'Check the path of your playlist if exists'
 	except OSError:
@@ -63,10 +64,10 @@ search_button.pack(ipady=5)
 search_button.place(x=280, y=170)
 
 # Trigger Enter key to run playSong()
-inputData.bind('<Return>', lambda event: playSong())
+input_field.bind('<Return>', lambda event: playSong())
 
 # Button for reset
-reset_button = Button(App, text="reset", fg='white', bg='#783ab7', activebackground='#984bb7', width=10, height=1, bd=4, font=fontStyle, command=lambda: inputData.delete(first=0, last=100))
+reset_button = Button(App, text="reset", fg='white', bg='#783ab7', activebackground='#984bb7', width=10, height=1, bd=4, font=fontStyle, command=lambda: input_field.delete(first=0, last=100))
 reset_button.pack()
 reset_button.place(x=150, y=170)
 
