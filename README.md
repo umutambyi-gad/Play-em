@@ -1,65 +1,69 @@
-# Python script for play songs from local playlist
-This script will give you GUI app which has input field and button where you will enter some text in the input field that you think is included in specific song and click on search button then the script will look up in your playlist location and opens it.<br>
+# Play my songs
+***Python script for play songs from local playlist***
+
+This script will give you GUI app which has an input field and search button where you will enter some phrase in the input field that you think is included in specific song and click on search button then the script will look up in your playlist location and opens it or click pick random button to place random song.<br>
 This will reduce the time you spend while you're looking into your playlist to search for one song to play.<br>
-And also if many songs matches all of them will be place in your default media player
-
-## Getting started
-First of all install python version 3 and all requirements like the following to get started 
-```python
-pip install -r requirements.txt #on windows
-#OR
-pip3 install -r requirements.txt #on MAC OS and Linux
-```
-
-## Usage
-When you alread done with requirements just add the location<small>(path)</small> of where your playlist is located on `AddPathHere.txt` file like the following notice that you should just add only one path.
-```
+And also if many songs matches all of them will be played in your default media player
+# Author
+[**Umutambyi Gad**](https://github.com/umutambyi-gad)
+# Usage
+When you alread done with requirements just add the location<small>(path)</small> of where playlist is located on the [`AddPathHere.txt`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/AddPathHere.txt) file like the following notice that you should just add only one path.
+```text
 C:\Users\UserName\Songs
 ```
-**Thereafter there are two ways to run the script**
-- to run `play.py` in your command line or execute it in your *favorite editor/IDE* here is how in the command line
 
-```python
-python play.py #on windows
-#OR
-python3 play.py #on MAC OS and Linux
-```
-- edit `run.bat` to inlcude the path of your python script's path just see an example bellow **Thereafter double click on `run.bat` batch file**
+## Thereafter there are two ways to run the script
+**1. to run it with GUI app**
 
+
+run [`play.py`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/play.py) in your command line or execute it in your *favorite editor/IDE*.
+
+
+**OR**
+
+
+edit [`run.bat`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/run.bat) to inlcude the path of your python script's path just see an example bellow
 ```batch
 @echo off
 python C:/UserName/YourPythonScriptLocated/play.py #this line 
 ```
-
+**Thereafter double click on `run.bat` batch file**
 
 ---
+
 **After running the script then you will see GUI app Like**
 
-![GUI App](https://user-images.githubusercontent.com/65312850/99182949-a97b1600-2738-11eb-83d8-fa4bdb77a227.PNG)
+![GUI App](https://user-images.githubusercontent.com/65312850/99289510-5a6ad900-283d-11eb-80e3-206bdffce65b.PNG)
 
-**Then type the song that you want to play and hit search button to play that song**
+**Then type the song that you want to play and hit Enter or click on search button to play that song**
 
 ![Playing song](https://user-images.githubusercontent.com/65312850/99182957-b3047e00-2738-11eb-95ad-d8b7514d43fb.PNG)
 
-## RECOMANDATION
-
-To make it easier I recomanded to set an envirement variable of the location of the script in order to run the script wherever you're on your computer by running the batch file called `run.bat` like
-
-![Run bat](https://user-images.githubusercontent.com/65312850/99182943-9f591780-2738-11eb-818c-5103d1ba9dbb.PNG)
-
-## UPDATE
-I just added python script <small>`playUsingCommandLine.py`</small> with the help of [click](https://pypi.org/project/click/)
-module which will be run in the command line.
+***Another cool thing***
+You can click on `pick random`  or <kbd>ctrl+r</kbd> on keyboard button to play random song
+**2. to run it from the command line**
 
 
-Syntax
+Just run python script [`playUsingCommandLine.py`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/playUsingCommandLine.py) I created with the help of [click](https://pypi.org/project/click/)
+module which will be executed in the command line.
+
+**Syntax**
 
 ```bash
-python  playUsingCommandLine.py [OPTIONS] SONG
+python  playUsingCommandLine.py [OPTIONS] COMMAND [ARGS]
 ```
 [OPTIONS] is by default the path wich is written on [`AddPathHere.txt`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/AddPathHere.txt) file
 so to run it just do it like the following.
 
-```python
-python playUsingCommandLine.py godzil...
+```bash
+python playUsingCommandLine.py searchsong godzil...
 ```
+**OR pick random**
+```bash
+python playUsingCommandLine.py pickrandom
+```
+## Recommandation
+
+To make it easier I recommanded to set variable envirnment of the location of the script in order to run the script wherever you're on your computer by running the batch file called [`run.bat`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/run.bat) like
+
+![Run bat](https://user-images.githubusercontent.com/65312850/99182943-9f591780-2738-11eb-818c-5103d1ba9dbb.PNG)
