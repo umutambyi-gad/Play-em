@@ -58,6 +58,9 @@ random_button = Button(App, text="pick random", fg='white', bg='#6610f2', active
 random_button.pack()
 random_button.place(x=470, y=100)
 
+# Trigger r key to run pickRandom()
+input_field.bind('<Control-r>', lambda event: pickRandom())
+
 # Button for search (submit)
 search_button = Button(App, text="Search", fg='white', bg='#783ab7', activebackground='#984bb7', width=10, height=1, bd=4, command=playSong, font=fontStyle)
 search_button.pack(ipady=5)
