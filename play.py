@@ -30,10 +30,9 @@ def playSong():
 		for songs in os.listdir(path):
 			if song in songs.lower():
 				song_dir = os.path.join(path, songs)
-				mp_3 = songs.endswith('mp4')
+				mp_3 = songs.endswith('mp3')
 				mp_4 = songs.endswith('mp4')
-				jpg = songs.endswith('jpg')
-				if os.path.isfile(song_dir) and mp_3 or mp_4 or jpg:
+				if os.path.isfile(song_dir) and mp_3 or mp_4:
 					os.startfile(song_dir)
 					input_field.delete(first=0, last=100)
 		label['text'] = 'Enter any text you think is included in the song name'
