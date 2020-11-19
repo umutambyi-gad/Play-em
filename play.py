@@ -45,8 +45,13 @@ def playSong():
 # function for picking random song and play it
 def pickRandom():
 	try:
-		playList = [os.path.join(path, songs) for songs in os.listdir(path)]
-		os.startfile(random.choice(playList))
+		query = input_field.get().strip()
+		if query:
+			playList = [os.path.join(path, songs) for songs in os.listdir(path) if query in songs.lower()]
+			os.startfile(random.choice(playList))
+		else:
+			playList = [os.path.join(path, songs) for songs in os.listdir('D:/songs')]
+			os.startfile(random.choice(playList))
 		input_field.delete(first=0, last=100)
 	except FileNotFoundError:
 		label['text'] = 'Check the path of your playlist if exists'
