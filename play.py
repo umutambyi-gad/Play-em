@@ -28,7 +28,7 @@ def playSong():
 	try:
 		song = input_field.get().strip()
 		for songs in os.listdir(path):
-			if song in songs.lower():
+			if song.lower() in songs.lower():
 				song_dir = os.path.join(path, songs)
 				mp_3 = songs.endswith('mp3')
 				mp_4 = songs.endswith('mp4')
@@ -47,7 +47,7 @@ def pickRandom():
 	try:
 		query = input_field.get().strip()
 		if query:
-			playList = [os.path.join(path, songs) for songs in os.listdir(path) if query in songs.lower()]
+			playList = [os.path.join(path, songs) for songs in os.listdir(path) if query.lower() in songs.lower()]
 			os.startfile(random.choice(playList))
 		else:
 			playList = [os.path.join(path, songs) for songs in os.listdir('D:/songs')]
