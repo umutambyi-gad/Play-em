@@ -54,7 +54,7 @@ def pickRandom():
 			playList = [os.path.join(random_path, songs) for songs in os.listdir(random_path) if query.lower() in songs.lower()]
 			os.startfile(random.choice(playList))
 		else:
-			playList = [os.path.join(random_path, songs) for songs in os.listdir('D:/songs')]
+			playList = [os.path.join(random_path, songs) for songs in os.listdir(random_path)]
 			os.startfile(random.choice(playList))
 		input_field.delete(first=0, last=100)
 	except FileNotFoundError:
