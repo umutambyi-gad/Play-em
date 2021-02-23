@@ -21,21 +21,22 @@ input_field.place(x=75, y=100)
 
 # open `AddPathHere.txt` file to read the path(song location)
 with open('AddPathHere.txt') as file:
-	path = file.read().strip()
+	all_paths = file.read().strip().split('\n')
 
 # function for searching and playing songs
 def playSong():
 	try:
 		song = input_field.get().strip()
-		for songs in os.listdir(path):
-			if song.lower() in songs.lower():
-				song_dir = os.path.join(path, songs)
-				mp_3 = songs.endswith('mp3')
-				mp_4 = songs.endswith('mp4')
-				if os.path.isfile(song_dir) and mp_3 or mp_4:
-					os.startfile(song_dir)
-					input_field.delete(first=0, last=100)
-		label['text'] = 'Enter any text you think is included in the song name'
+		for path in all_paths:
+			for songs in os.listdir(path):
+				if song.lower() in songs.lower():
+					song_dir = os.path.join(path, songs)
+					mp_3 = songs.endswith('mp3')
+					mp_4 = songs.endswith('mp4')
+					if os.path.isfile(song_dir) and mp_3 or mp_4:
+						os.startfile(song_dir)
+						input_field.delete(first=0, last=100)
+			label['text'] = 'Enter any text you think is included in the song name'
 	except FileNotFoundError:
 		label['text'] = 'Check the path of your playlist if exists'
 	except OSError:
