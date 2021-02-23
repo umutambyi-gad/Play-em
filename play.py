@@ -47,11 +47,14 @@ def playSong():
 def pickRandom():
 	try:
 		query = input_field.get().strip()
+		# in all_paths pick random path to search random song
+		random_path = all_paths[random.randint(0, len(all_paths) - 1)]
 		if query:
-			playList = [os.path.join(path, songs) for songs in os.listdir(path) if query.lower() in songs.lower()]
+
+			playList = [os.path.join(random_path, songs) for songs in os.listdir(random_path) if query.lower() in songs.lower()]
 			os.startfile(random.choice(playList))
 		else:
-			playList = [os.path.join(path, songs) for songs in os.listdir('D:/songs')]
+			playList = [os.path.join(random_path, songs) for songs in os.listdir('D:/songs')]
 			os.startfile(random.choice(playList))
 		input_field.delete(first=0, last=100)
 	except FileNotFoundError:
