@@ -1,7 +1,20 @@
-import os
-from tkinter import *
 import tkinter.font as tkFont
-import random
+from os import (
+	listdir,
+	path,
+	startfile
+)
+from tkinter import (
+	Tk,
+	Label,
+	Entry,
+	Button
+)
+from random import (
+	randint,
+	choice
+)
+
 
 App = Tk(className="Search")
 App.iconbitmap('searchIcon.ico')
@@ -28,13 +41,13 @@ def playSong():
 	try:
 		song = input_field.get().strip()
 		for path in all_paths:
-			for songs in os.listdir(path):
+			for songs in listdir(path):
 				if song.lower() in songs.lower():
-					song_dir = os.path.join(path, songs)
+					song_dir = path.join(path, songs)
 					mp_3 = songs.endswith('mp3')
 					mp_4 = songs.endswith('mp4')
-					if os.path.isfile(song_dir) and mp_3 or mp_4:
-						os.startfile(song_dir)
+					if path.isfile(song_dir) and mp_3 or mp_4:
+						startfile(song_dir)
 						input_field.delete(first=0, last=100)
 			label['text'] = 'Enter any text you think is included in the song name'
 	except FileNotFoundError:
@@ -50,14 +63,14 @@ def pickRandom():
 	try:
 		query = input_field.get().strip()
 		# in all_paths pick random path to search random song
-		random_path = all_paths[random.randint(0, len(all_paths) - 1)]
+		random_path = all_paths[randint(0, len(all_paths) - 1)]
 		if query:
 
-			playList = [os.path.join(random_path, songs) for songs in os.listdir(random_path) if query.lower() in songs.lower()]
-			os.startfile(random.choice(playList))
+			playList = [path.join(random_path, songs) for songs in listdir(random_path) if query.lower() in songs.lower()]
+			startfile(choice(playList))
 		else:
-			playList = [os.path.join(random_path, songs) for songs in os.listdir(random_path)]
-			os.startfile(random.choice(playList))
+			playList = [path.join(random_path, songs) for songs in listdir(random_path)]
+			startfile(choice(playList))
 		input_field.delete(first=0, last=100)
 	except FileNotFoundError:
 		label['text'] = 'Check the path of your playlist if exists'
