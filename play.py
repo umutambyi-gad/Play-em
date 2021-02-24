@@ -5,7 +5,7 @@ import random
 
 App = Tk(className="Search")
 App.iconbitmap('searchIcon.ico')
-App.geometry("570x320")
+App.geometry("590x330")
 App.configure(bg='#241e79')
 
 fontStyle = tkFont.Font(family='Courier', size=13, weight='bold')
