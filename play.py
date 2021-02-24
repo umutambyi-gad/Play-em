@@ -10,7 +10,7 @@ App.configure(bg='#241e79')
 
 fontStyle = tkFont.Font(family='Courier', size=13, weight='bold')
 
-label = Label(text='Enter any text you think is included in the song name', width=100, height=2, fg='black', bg='#673ab7', font=fontStyle)
+label = Label(text='Enter any text you think is included in the song name', width=100, height=2, fg='white', bg='#673ab7', font=fontStyle)
 label.pack()
 
 # an input field
@@ -39,8 +39,10 @@ def playSong():
 			label['text'] = 'Enter any text you think is included in the song name'
 	except FileNotFoundError:
 		label['text'] = 'Check the path of your playlist if exists'
+		label['fg'] = 'red'
 	except OSError:
-		label['text'] = 'Check the permission or unlock the driver if is locked'
+		label['text'] = 'Check the permission or unlock the driver if it is locked'
+		label['fg'] = 'red'
 
 
 # function for picking random song and play it
@@ -59,8 +61,10 @@ def pickRandom():
 		input_field.delete(first=0, last=100)
 	except FileNotFoundError:
 		label['text'] = 'Check the path of your playlist if exists'
+		label['fg'] = 'red'
 	except OSError:
-		label['text'] = 'Check the permission or unlock the driver if is locked'
+		label['text'] = 'Check the permission or unlock the driver if it is locked'
+		label['fg'] = 'red'
 
 random_button = Button(App, text="pick random", fg='white', bg='#6610f2', activebackground='#7710f2', width=9, height=1, bd=4, command=pickRandom, font=tkFont.Font(family='Lucida Grande', size=11, weight='bold'))
 random_button.pack()
