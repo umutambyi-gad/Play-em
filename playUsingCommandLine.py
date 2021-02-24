@@ -19,7 +19,7 @@ def searchSong(location, song):
 		for songs in os.listdir(location):
 			if song in songs.lower():
 				song_dir = os.path.join(location, songs)
-				if os.path.isfile(song_dir) and songs.endswith('mp4'):
+				if os.path.isfile(song_dir) and songs.endswith('mp4') or songs.endswith('mp3'):
 					os.startfile(song_dir)
 	except FileNotFoundError:
 		click.echo(click.style('Check the path of your playlist exists', fg='bright_red'))
