@@ -5,7 +5,7 @@ This script will give you GUI app which has an input field and search button whe
 This will reduce the time you spend while you're looking into your playlist to search for one song to play.<br>
 And also if many songs matches all of them will be played in your default media player
 # Author
-[**Umutambyi Gad**](https://github.com/umutambyi-gad)
+[**Umutambyi Gad**](https://umutambyigad.herokuapp.com)
 # Usage
 When you alread done with requirements just add the location<small>(path)</small> of where playlist is located on the [`AddPathHere.txt`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/AddPathHere.txt) file like the following notice that you should just add only one path.
 ```text
