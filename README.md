@@ -3,7 +3,7 @@
 
 This script will give you GUI app which has an input field and search button where you will enter some phrase in the input field that you think is included in specific song and click on search button then the script will look up in your playlist location and opens it or click pick random button to place random song.<br>
 This will reduce the time you spend while you're looking into your playlist to search for one song to play.<br>
-And also if many songs matches all of them will be played in your default media player
+And also if many songs matches all of them will be played in your default media player.
 # Author
 [**Umutambyi Gad**](https://umutambyigad.herokuapp.com)
 # Usage
@@ -22,7 +22,7 @@ run [`play.py`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/play.
 **OR**
 
 
-edit [`run.bat`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/run.bat) to inlcude the path of your python script's path just see an example bellow
+edit [`run.bat`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/run.bat) to inlcude the path of your python script's path just see an example bellow.
 ```batch
 @echo off
 python C:/UserName/YourPythonScriptLocated/play.py #this line 
@@ -46,16 +46,14 @@ You can click on `pick random`  or <kbd>ctrl+r</kbd> on keyboard button to play 
 **2. to run it from the command line**
 
 
-Just run python script [`playUsingCommandLine.py`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/playUsingCommandLine.py) I created with the help of [click](https://pypi.org/project/click/)
-module which will be executed in the command line.
+Just run python script [`playUsingCommandLine.py`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/playUsingCommandLine.py) I created with the help of [click (https://pypi.org/project/click/) module which will be executed in the command line.
 
 **Syntax**
 
 ```bash
 python  playUsingCommandLine.py [OPTIONS] COMMAND [ARGS]
 ```
-[OPTIONS] is by default the path wich is written on [`AddPathHere.txt`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/AddPathHere.txt) file
-so to run it just do it like the following.
+[OPTIONS] is by default the path wich is written on [`AddPathHere.txt`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/AddPathHere.txt) file so to run it just do it like the following.
 
 ```bash
 python playUsingCommandLine.py searchsong godzil...
