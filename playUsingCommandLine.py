@@ -28,12 +28,16 @@ for _path in all_paths:
 			for songs in listdir(location):
 				if song in songs.lower():
 					song_dir = path.join(location, songs)
-					if path.isfile(song_dir) and songs.endswith('mp4') or songs.endswith('mp3'):
+					mp_4 = songs.endswith('mp4')
+					mp_3 = songs.endswith('mp3')
+					mpg = songs.endswith('mpg')
+					avi = songs.endswith('avi')
+					if path.isfile(song_dir) and mp_4 or mp_3 or mpg or avi:
 						startfile(song_dir)
 		except FileNotFoundError:
 			click.echo(click.style('Check the path of your playlist exists', fg='bright_red'))
 		except OSError:
-			click.echo(click.style('Check the permission or unlock the driver if is locked', fg='bright_red'))
+			click.echo(click.style('Check the path permission or unlock the driver if is locked', fg='bright_red'))
 
 
 # in all_paths pick random path to search random song

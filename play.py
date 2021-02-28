@@ -46,7 +46,9 @@ def playSong():
 					song_dir = path.join(_path, songs)
 					mp_3 = songs.endswith('mp3')
 					mp_4 = songs.endswith('mp4')
-					if path.isfile(song_dir) and mp_3 or mp_4:
+					mpg = songs.endswith('mpg')
+					avi = songs.endswith('avi')
+					if path.isfile(song_dir) and mp_3 or mp_4 or mpg or avi:
 						startfile(song_dir)
 						input_field.delete(first=0, last=100)
 			label['text'] = 'Enter any text you think is included in the song name'
