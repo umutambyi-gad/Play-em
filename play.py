@@ -40,10 +40,10 @@ with open('AddPathHere.txt') as file:
 def playSong():
 	try:
 		song = input_field.get().strip()
-		for path in all_paths:
-			for songs in listdir(path):
+		for _path in all_paths:
+			for songs in listdir(_path):
 				if song.lower() in songs.lower():
-					song_dir = path.join(path, songs)
+					song_dir = path.join(_path, songs)
 					mp_3 = songs.endswith('mp3')
 					mp_4 = songs.endswith('mp4')
 					if path.isfile(song_dir) and mp_3 or mp_4:
