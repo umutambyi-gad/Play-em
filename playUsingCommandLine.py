@@ -12,17 +12,17 @@ import click
 
 # open `AddPathHere.txt` file to read the path(song location)
 with open('AddPathHere.txt') as file:
-	file_path = file.read().strip().split('\n')
+	all_paths = file.read().strip().split('\n')
 
 @click.group()
 def manage():
 	pass
 
-for _path in file_path:
+for _path in all_paths:
 	@manage.command()
 	@click.argument("song")
 	@click.option('-location', default=_path, help='Location of the song')
-	def searchSong(location, song):
+	def search(location, song):
 		try:
 			song = song.strip().lower()
 			for songs in listdir(location):
@@ -37,11 +37,11 @@ for _path in file_path:
 
 
 # in all_paths pick random path to search random song
-random_path = file_path[randint(0, len(file_path) - 1)]
+random_path = all_paths[randint(0, len(all_paths) - 1)]
 
 @manage.command()
 @click.option('-location', default=random_path, help='Location of the song')
-def pickRandom(location):
+def random(location):
 	try:
 		playList = [path.join(random_path, songs) for songs in listdir(random_path)]
 		startfile(choice(playList))
