@@ -15,7 +15,6 @@ C:\Users\UserName\Songs
 C:\Users\UserName\Songs\new school
 C:\Users\UserName\Songs\old school
 ```
-```
 
 
 ## Thereafter there are two ways to run the script
@@ -29,6 +28,7 @@ run [`play.py`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/play.
 
 
 edit [`run.bat`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/run.bat) to inlcude the path of your python script's path just see an example bellow.
+
 ```batch
 @echo off
 python C:/UserName/YourPythonScriptLocated/play.py #this line 
