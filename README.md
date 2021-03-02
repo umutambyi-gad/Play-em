@@ -52,7 +52,7 @@ You can click on `pick random`  or <kbd>ctrl+r</kbd> on keyboard button to play 
 **2. to run it from the command line**
 
 
-Just run python script [`playUsingCommandLine.py`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/playUsingCommandLine.py) I created with the help of [click (https://pypi.org/project/click/) module which will be executed in the command line.
+Just run python script [`playUsingCommandLine.py`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/playUsingCommandLine.py) I created with the help of [click](https://pypi.org/project/click/) module which will be executed in the command line.
 
 **Syntax**
 
