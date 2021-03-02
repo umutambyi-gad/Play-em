@@ -1,11 +1,10 @@
 # Play 'em
-***a script for searching and playing songs from different location on your computer***
-This is
+***a script for searching and playing songs from different location on your computer.***<br><br>
 This script will give you GUI app which has an input field and search button where you will enter some phrase in the input field that you think is included in specific song and click on search button then the script will look up in your playlist location and opens it or click pick random button to place random song.<br>
 This will reduce the time you spend while you're looking into your playlist to search for one song to play.<br>
 And also if many songs matches all of them will be played in your default media player.
 # Author
-[**Umutambyi Gad**](https://umutambyigad.herokuapp.com)
+[***Umutambyi Gad***](https://umutambyigad.herokuapp.com)
 # Usage
 When you alread done with requirements just add the location<small>(path)</small> of where playlist is located on the [`AddPathHere.txt`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/AddPathHere.txt) file like the following notice that you should just add only one path.
 ```text
@@ -63,11 +62,11 @@ python  playUsingCommandLine.py [OPTIONS] COMMAND [ARGS]
 [OPTIONS] is by default the path wich is written on [`AddPathHere.txt`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/AddPathHere.txt) file so to run it just do it like the following.
 
 ```bash
-python playUsingCommandLine.py searchsong godzil...
+python playUsingCommandLine.py search godzil
 ```
 **Or pick random**
 ```bash
-python playUsingCommandLine.py pickrandom
+python playUsingCommandLine.py random
 ```
 ## Recommandation
 
