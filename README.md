@@ -1,6 +1,6 @@
-# Play my songs
-***Python script for play songs from local playlist***
-
+# Play 'em
+***a script for searching and playing songs from different location on your computer***
+This is
 This script will give you GUI app which has an input field and search button where you will enter some phrase in the input field that you think is included in specific song and click on search button then the script will look up in your playlist location and opens it or click pick random button to place random song.<br>
 This will reduce the time you spend while you're looking into your playlist to search for one song to play.<br>
 And also if many songs matches all of them will be played in your default media player.
@@ -11,6 +11,13 @@ When you alread done with requirements just add the location<small>(path)</small
 ```text
 C:\Users\UserName\Songs
 ```
+***or add multiple paths like:***
+```text
+C:\Users\UserName\Songs\new school
+C:\Users\UserName\Songs\old school
+```
+```
+
 
 ## Thereafter there are two ways to run the script
 **1. to run it with GUI app**
