@@ -46,7 +46,7 @@ python C:/UserName/YourPythonScriptLocated/play.py #this line
 ![Playing song](https://user-images.githubusercontent.com/65312850/99182957-b3047e00-2738-11eb-95ad-d8b7514d43fb.PNG)
 
 ***Another cool thing***
-You can click on `pick random`  or <kbd>ctrl+r</kbd> on keyboard button to play random song.
+You can click on `pick random`  or <kbd>ctrl</kbd> + <kbd>r</kbd> on keyboard button to play random song.
 
 
 **2. to run it from the command line**
