@@ -10,10 +10,11 @@ from random import (
 	randint,
 	choice
 )
-
+import platform
 
 App = Tk(className="Search")
-App.iconbitmap('searchIcon.ico')
+if platform.system() == "Windows":
+	App.iconbitmap('searchIcon.ico')
 App.geometry("590x330")
 App.configure(bg='#241e79')
 
