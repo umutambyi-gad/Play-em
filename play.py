@@ -11,6 +11,7 @@ from random import (
 	choice
 )
 import platform
+import subprocess
 
 App = Tk(className="Search")
 if platform.system() == "Windows":
@@ -46,7 +47,10 @@ def playSong():
 					mpg = songs.endswith('mpg')
 					avi = songs.endswith('avi')
 					if os.path.isfile(song_dir) and mp_3 or mp_4 or mpg or avi:
-						os.startfile(song_dir)
+						if platform.system() == 'Windows':
+							os.startfile(song_dir)
+						else:
+							subprocess.call(['open', song_dir])
 						input_field.delete(first=0, last=100)
 			label['text'] = 'Enter any text you think is included in the song name'
 	except FileNotFoundError:
@@ -66,10 +70,16 @@ def pickRandom():
 		if query:
 
 			playList = [os.path.join(random_path, songs) for songs in os.listdir(random_path) if query.lower() in songs.lower()]
-			os.startfile(choice(playList))
+			if platform.system() == 'Windows':
+				os.startfile(playList)
+			else:
+				subprocess.call(['open', choice(playList)])
 		else:
 			playList = [os.path.join(random_path, songs) for songs in os.listdir(random_path)]
-			os.startfile(choice(playList))
+			if platform.system() == 'Windows':
+				os.startfile(choice(playList))
+			else:
+				subprocess.call(['open', choice(playList)])
 		input_field.delete(first=0, last=100)
 	except FileNotFoundError:
 		label['text'] = 'Check the path of your playlist if exists'

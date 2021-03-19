@@ -4,7 +4,8 @@ from random import (
 )
 import os
 import click
-
+import platform
+import subprocess
 
 # open `AddPathHere.txt` file to read the path(song location)
 with open('AddPathHere.txt') as file:
@@ -29,7 +30,10 @@ for _path in all_paths:
 					mpg = songs.endswith('mpg')
 					avi = songs.endswith('avi')
 					if os.path.isfile(song_dir) and mp_4 or mp_3 or mpg or avi:
-						os.startfile(song_dir)
+						if platform.system() == 'Windows':
+							os.startfile(song_dir)
+						else:
+							subprocess.call(['open', song_dir])
 		except FileNotFoundError:
 			click.echo(click.style('Check the path of your playlist exists', fg='bright_red'))
 		except OSError:
@@ -44,7 +48,10 @@ random_path = all_paths[randint(0, len(all_paths) - 1)]
 def random(location):
 	try:
 		playList = [os.path.join(random_path, songs) for songs in os.listdir(random_path)]
-		os.startfile(choice(playList))
+		if platform.system() == 'Windows':
+			os.startfile(choice(playList))
+		else:
+			subprocess.call(['open', choice(playList)])
 	except FileNotFoundError:
 		click.echo(click.style('Check the path of your playlist exists', fg='bright_red'))
 	except OSError:
