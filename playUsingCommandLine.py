@@ -2,11 +2,7 @@ from random import (
 	randint,
 	choice
 )
-from os import (
-	listdir,
-	path,
-	startfile
-)
+import os
 import click
 
 
@@ -25,15 +21,15 @@ for _path in all_paths:
 	def search(location, song):
 		try:
 			song = song.strip().lower()
-			for songs in listdir(location):
+			for songs in os.listdir(location):
 				if song in songs.lower():
-					song_dir = path.join(location, songs)
+					song_dir = os.path.join(location, songs)
 					mp_4 = songs.endswith('mp4')
 					mp_3 = songs.endswith('mp3')
 					mpg = songs.endswith('mpg')
 					avi = songs.endswith('avi')
-					if path.isfile(song_dir) and mp_4 or mp_3 or mpg or avi:
-						startfile(song_dir)
+					if os.path.isfile(song_dir) and mp_4 or mp_3 or mpg or avi:
+						os.startfile(song_dir)
 		except FileNotFoundError:
 			click.echo(click.style('Check the path of your playlist exists', fg='bright_red'))
 		except OSError:
@@ -47,8 +43,8 @@ random_path = all_paths[randint(0, len(all_paths) - 1)]
 @click.option('-location', default=random_path, help='Location of the song')
 def random(location):
 	try:
-		playList = [path.join(random_path, songs) for songs in listdir(random_path)]
-		startfile(choice(playList))
+		playList = [os.path.join(random_path, songs) for songs in os.listdir(random_path)]
+		os.startfile(choice(playList))
 	except FileNotFoundError:
 		click.echo(click.style('Check the path of your playlist exists', fg='bright_red'))
 	except OSError:
