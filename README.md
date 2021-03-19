@@ -68,8 +68,3 @@ python playUsingCommandLine.py search godzil
 ```bash
 python playUsingCommandLine.py random
 ```
-## Recommandation
-
-To make it easier I recommanded to set variable envirnment of the location of the script in order to run the script wherever you're on your computer by running the batch file called [`run.bat`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/run.bat) like
-
-![Run bat](https://user-images.githubusercontent.com/65312850/99182943-9f591780-2738-11eb-818c-5103d1ba9dbb.PNG)
