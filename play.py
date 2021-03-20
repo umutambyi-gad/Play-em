@@ -13,6 +13,7 @@ from random import (
 import platform
 import subprocess
 
+
 App = Tk(className="Search")
 if platform.system() == "Windows":
 	App.iconbitmap('searchIcon.ico')
@@ -50,7 +51,8 @@ def playSong():
 						if platform.system() == 'Windows':
 							os.startfile(song_dir)
 						else:
-							subprocess.call(['open', song_dir])
+							opener = "open" if platform.system() == "Darwin" else "xdg-open"
+							subprocess.call([opener, song_dir])
 						input_field.delete(first=0, last=100)
 			label['text'] = 'Enter any text you think is included in the song name'
 	except FileNotFoundError:
@@ -73,13 +75,15 @@ def pickRandom():
 			if platform.system() == 'Windows':
 				os.startfile(playList)
 			else:
-				subprocess.call(['open', choice(playList)])
+ 				opener = "open" if platform.system() == "Darwin" else "xdg-open"
+
 		else:
 			playList = [os.path.join(random_path, songs) for songs in os.listdir(random_path)]
 			if platform.system() == 'Windows':
 				os.startfile(choice(playList))
 			else:
-				subprocess.call(['open', choice(playList)])
+				opener = "open" if platform.system() == "Darwin" else "xdg-open"
+				subprocess.call([opener, choice(playList)])
 		input_field.delete(first=0, last=100)
 	except FileNotFoundError:
 		label['text'] = 'Check the path of your playlist if exists'

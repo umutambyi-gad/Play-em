@@ -33,7 +33,8 @@ for _path in all_paths:
 						if platform.system() == 'Windows':
 							os.startfile(song_dir)
 						else:
-							subprocess.call(['open', song_dir])
+							opener = "open" if platform.system() == "Darwin" else "xdg-open"
+							subprocess.call([opener, song_dir])
 		except FileNotFoundError:
 			click.echo(click.style('Check the path of your playlist exists', fg='bright_red'))
 		except OSError:
@@ -51,7 +52,8 @@ def random(location):
 		if platform.system() == 'Windows':
 			os.startfile(choice(playList))
 		else:
-			subprocess.call(['open', choice(playList)])
+			opener = "open" if platform.system() == "Darwin" else "xdg-open"
+			subprocess.call([opener, choice(playList)])
 	except FileNotFoundError:
 		click.echo(click.style('Check the path of your playlist exists', fg='bright_red'))
 	except OSError:
