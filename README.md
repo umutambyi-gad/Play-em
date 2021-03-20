@@ -3,10 +3,10 @@ python GUI and command line utility for searching and playing songs from differe
 
 ## Table of content
 <ul>
-  <li><b><a href="https://github.com/umutambyi-gad/Play-em#description">Description</a></b></li>
-  <li><b><a href="https://github.com/umutambyi-gad/Play-em#author">Author</a></b></li>
-  <li><b><a href="https://github.com/umutambyi-gad/Play-em#usage">Usage</a></b></li>
-  <li><b><a href="https://github.com/umutambyi-gad/Play-em#license">License</a></b></li>
+  <li><b><a href="#description">Description</a></b></li>
+  <li><b><a href="#author">Author</a></b></li>
+  <li><b><a href="#usage">Usage</a></b></li>
+  <li><b><a href="#license">License</a></b></li>
 </ul>
 
 ## Description
