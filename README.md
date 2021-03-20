@@ -4,7 +4,13 @@ This script will give you GUI app which has an input field and search button whe
 This will reduce the time you spend while you're looking into your playlist to search for one song to play.<br>
 And also if many songs matches all of them will be played in your default media player.
 # Author
-[***Umutambyi Gad***](https://umutambyigad.herokuapp.com)
+**Website:** [umutambyigad](https://umutambyigad.herokuapp.com) <br>
+**Stackoverflow:** [@umutambyi-gad](https://stackoverflow.com/users/13536893/umutambyi-gad) <br>
+**Twitter:** [@umutambyi_gad](https://twitter.com/umutambyi_gad) <br>
+**Linkedin:**  [@umutambyi-gad](https://www.linkedin.com/in/umutambyi-gad/) <br>
+**Dev.to:** [@umutambyigad](https://dev.to/umutambyigad) <br>
+**Email:** [umutambyig@gmail.com](mailto:umutambyig@gmail.com) <br>
+
 # Usage
 When you alread done with requirements just add the location<small>(path)</small> of where playlist is located on the [`AddPathHere.txt`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/AddPathHere.txt) file like the following.
 ```text
@@ -18,7 +24,7 @@ C:\Users\UserName\Songs\old school
 
 
 ## Thereafter there are two ways to run the script
-### 1. to run it with GUI app**
+### 1. to run it with GUI app
 
 
 run [`play.py`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/play.py) via command line or execute it via your *favorite editor/IDE*.
