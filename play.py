@@ -75,8 +75,8 @@ def pickRandom():
 			if platform.system() == 'Windows':
 				os.startfile(playList)
 			else:
- 				opener = "open" if platform.system() == "Darwin" else "xdg-open"
-
+				opener = "open" if platform.system() == "Darwin" else "xdg-open"
+				subprocess.call([opener, choice(playList)])
 		else:
 			playList = [os.path.join(random_path, songs) for songs in os.listdir(random_path)]
 			if platform.system() == 'Windows':
