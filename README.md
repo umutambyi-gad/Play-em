@@ -6,7 +6,7 @@ And also if many songs matches all of them will be played in your default media 
 # Author
 [***Umutambyi Gad***](https://umutambyigad.herokuapp.com)
 # Usage
-When you alread done with requirements just add the location<small>(path)</small> of where playlist is located on the [`AddPathHere.txt`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/AddPathHere.txt) file like the following notice that you should just add only one path.
+When you alread done with requirements just add the location<small>(path)</small> of where playlist is located on the [`AddPathHere.txt`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/AddPathHere.txt) file like the following.
 ```text
 C:\Users\UserName\Songs
 ```
@@ -18,24 +18,10 @@ C:\Users\UserName\Songs\old school
 
 
 ## Thereafter there are two ways to run the script
-**1. to run it with GUI app**
+### 1. to run it with GUI app**
 
 
-run [`play.py`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/play.py) in your command line or execute it in your *favorite editor/IDE*.
-
-
-**OR**
-
-
-edit [`run.bat`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/run.bat) to inlcude the path of your python script's path just see an example bellow.
-
-```batch
-@echo off
-python C:/UserName/YourPythonScriptLocated/play.py #this line 
-```
-**Thereafter double click on `run.bat` batch file**
-
----
+run [`play.py`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/play.py) via command line or execute it via your *favorite editor/IDE*.
 
 **After running the script then you will see GUI app Like**
 
@@ -49,22 +35,24 @@ python C:/UserName/YourPythonScriptLocated/play.py #this line
 You can click on `pick random`  or <kbd>ctrl</kbd> + <kbd>r</kbd> on keyboard button to play random song.
 
 
-**2. to run it from the command line**
+### 2. to run it from the command line
 
 
-Just run python script [`playUsingCommandLine.py`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/playUsingCommandLine.py) I created with the help of [click](https://pypi.org/project/click/) module which will be executed in the command line.
+Just run [`playUsingCommandLine.py`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/playUsingCommandLine.py)
 
 **Syntax**
 
 ```bash
 python  playUsingCommandLine.py [OPTIONS] COMMAND [ARGS]
 ```
-[OPTIONS] is by default the path wich is written on [`AddPathHere.txt`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/AddPathHere.txt) file so to run it just do it like the following.
+
+**Example**
 
 ```bash
 python playUsingCommandLine.py search godzil
 ```
 **Or pick random**
+
 ```bash
 python playUsingCommandLine.py random
 ```
