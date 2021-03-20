@@ -1,9 +1,20 @@
-# Play 'em
-***python GUI and command line utility for searching and playing songs from different location on your computer.***<br><br>
+## Play 'em
+python GUI and command line utility for searching and playing songs from different location on your computer
+
+## Table of content
+<ul>
+  <li><b><a href="https://github.com/umutambyi-gad/Play-em#description">Description</a></b></li>
+  <li><b><a href="https://github.com/umutambyi-gad/Play-em#author">Author</a></b></li>
+  <li><b><a href="https://github.com/umutambyi-gad/Play-em#usage">Usage</a></b></li>
+  <li><b><a href="https://github.com/umutambyi-gad/Play-em#license">License</a></b></li>
+</ul>
+
+## Description
 This script will give you GUI app which has an input field and search button where you will enter some phrase in the input field that you think is included in specific song and click on search button then the script will look up in your playlist location and opens it or click pick random button to place random song.<br>
 This will reduce the time you spend while you're looking into your playlist to search for one song to play.<br>
 And also if many songs matches all of them will be played in your default media player.
-# Author
+
+## Author
 **Website:** [umutambyigad](https://umutambyigad.herokuapp.com) <br>
 **Stackoverflow:** [@umutambyi-gad](https://stackoverflow.com/users/13536893/umutambyi-gad) <br>
 **Twitter:** [@umutambyi_gad](https://twitter.com/umutambyi_gad) <br>
@@ -11,7 +22,7 @@ And also if many songs matches all of them will be played in your default media 
 **Dev.to:** [@umutambyigad](https://dev.to/umutambyigad) <br>
 **Email:** [umutambyig@gmail.com](mailto:umutambyig@gmail.com) <br>
 
-# Usage
+## Usage
 When you alread done with requirements just add the location<small>(path)</small> of where playlist is located on the [`AddPathHere.txt`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/AddPathHere.txt) file like the following.
 ```text
 C:\Users\UserName\Songs
@@ -23,8 +34,8 @@ C:\Users\UserName\Songs\old school
 ```
 
 
-## Thereafter there are two ways to run the script
-### 1. to run it with GUI app
+### Thereafter there are two ways to run the script
+#### 1. to run it with GUI app
 
 
 run [`play.py`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/play.py) via command line or execute it via your *favorite editor/IDE*.
@@ -41,7 +52,7 @@ run [`play.py`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/play.
 You can click on `pick random`  or <kbd>ctrl</kbd> + <kbd>r</kbd> on keyboard button to play random song.
 
 
-### 2. to run it from the command line
+#### 2. to run it from the command line
 
 
 Just run [`playUsingCommandLine.py`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/playUsingCommandLine.py)
@@ -62,5 +73,5 @@ python playUsingCommandLine.py search godzil
 ```bash
 python playUsingCommandLine.py random
 ```
-# License
+## License
 This project is under the [MIT](https://github.com/umutambyi-gad/Play-em/blob/master/LICENSE.txt) license
