@@ -62,3 +62,5 @@ python playUsingCommandLine.py search godzil
 ```bash
 python playUsingCommandLine.py random
 ```
+# License
+This project is under the [MIT](https://github.com/umutambyi-gad/Play-em/blob/master/LICENSE.txt) license
