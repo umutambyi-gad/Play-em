@@ -1,5 +1,5 @@
 ## Play 'em
-python GUI and command line utility for searching and playing songs from different location on your computer
+Python GUI and command line utility for searching and playing songs from different location on your computer
 
 ## Table of content
 <ul>
