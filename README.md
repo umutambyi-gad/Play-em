@@ -34,8 +34,8 @@ C:\Users\UserName\Songs\old school
 ```
 
 
-### Thereafter there are two ways to run the script
-#### 1. to run it with GUI app
+### 2 Different ways of usage
+#### 1. Using GUI app
 
 
 run [`play.py`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/play.py) via command line or execute it via your *favorite editor/IDE*.
@@ -52,7 +52,7 @@ run [`play.py`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/play.
 You can click on `pick random`  or <kbd>ctrl</kbd> + <kbd>r</kbd> on keyboard button to play random song.
 
 
-#### 2. to run it from the command line
+#### 2. Using command line
 
 
 Just run [`playUsingCommandLine.py`](https://github.com/umutambyi-gad/Play-my-songs/blob/master/playUsingCommandLine.py)
