@@ -34,7 +34,7 @@ C:\Users\UserName\Songs\old school
 ```
 
 
-### 2 Different ways of usage
+### Different ways of usage
 #### 1. Using GUI app
 
 
