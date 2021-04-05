@@ -1,14 +1,6 @@
 ## Play 'em
 Python GUI and command line utility for searching and playing songs from different location on your computer
 
-## Table of content
-<ul>
-  <li><b><a href="#description">Description</a></b></li>
-  <li><b><a href="#author">Author</a></b></li>
-  <li><b><a href="#usage">Usage</a></b></li>
-  <li><b><a href="#license">License</a></b></li>
-</ul>
-
 ## Description
 This script will give you GUI app which has an input field and search button where you will enter some phrase in the input field that you think is included in specific song and click on search button then the script will look up in your playlist location and opens it or click pick random button to place random song.<br>
 This will reduce the time you spend while you're looking into your playlist to search for one song to play.<br>
