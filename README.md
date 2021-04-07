@@ -7,6 +7,7 @@ This will reduce the time you spend while you're looking into your playlist to s
 And also if many songs matches all of them will be played in your default media player.
 
 ## Author
+**Gitlab** [@umutambyi-gad](https://gitlab.com/umutambyi-gad) <br>
 **Website:** [umutambyigad](https://umutambyigad.herokuapp.com) <br>
 **Stackoverflow:** [@umutambyi-gad](https://stackoverflow.com/users/13536893/umutambyi-gad) <br>
 **Twitter:** [@umutambyi_gad](https://twitter.com/umutambyi_gad) <br>
